@@ -46,7 +46,7 @@ export const App = () => (
         <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="/people">
           <Route index element={<People />} />
-          <Route path="/people/:slug" element={<People />} />
+          <Route path=":slug" element={<People />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>

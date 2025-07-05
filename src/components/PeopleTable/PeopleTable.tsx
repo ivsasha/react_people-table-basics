@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const PeopleTable: React.FC<Props> = ({ people }) => {
-  const slagParam = useParams<{ slug?: string }>();
+  const slugParam = useParams<{ slug?: string }>();
 
   function createSlug(person: Person, who: string) {
     const parentPerson = people.find(p => {
@@ -43,7 +43,7 @@ export const PeopleTable: React.FC<Props> = ({ people }) => {
               data-cy="person"
               key={person.name}
               className={
-                slagParam.slug === person.slug ? 'has-background-warning' : ''
+                slugParam.slug === person.slug ? 'has-background-warning' : ''
               }
             >
               <td>
